@@ -1,0 +1,127 @@
+﻿@{
+    Layout = "";
+}
+@model NopExtension.Plugins.PayFast.Models.ConfigurationModel
+@using System.Web.Mvc.Html
+@using Nop.Web.Framework;
+
+@using (Html.BeginForm())
+{
+    <table class="adminContent">
+        <tr>
+            <td colspan="2" width="100%">
+                <hr />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <strong>This payment gateway should only be used by South African websites. For more
+                    information see <a href="http://www.payfast.co.za/c/std/what-is-payfast">http://www.payfast.co.za/c/std/what-is-payfast</a></strong>
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.UseSandbox):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.UseSandbox)
+                @Html.ValidationMessageFor(model => model.UseSandbox)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.MerchantId):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.MerchantId)
+                @Html.ValidationMessageFor(model => model.MerchantId)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.MerchantKey):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.MerchantKey)
+                @Html.ValidationMessageFor(model => model.MerchantKey)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.IncludeNotifyUrl):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.IncludeNotifyUrl)
+                @Html.ValidationMessageFor(model => model.IncludeNotifyUrl)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.SandboxProcessorUrl):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.SandboxProcessorUrl)
+                @Html.ValidationMessageFor(model => model.SandboxProcessorUrl)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.LiveProcessorUrl):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.LiveProcessorUrl)
+                @Html.ValidationMessageFor(model => model.LiveProcessorUrl)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.SandboxValidateUrl):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.SandboxValidateUrl)
+                @Html.ValidationMessageFor(model => model.SandboxValidateUrl)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.LiveValidateUrl):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.LiveValidateUrl)
+                @Html.ValidationMessageFor(model => model.LiveValidateUrl)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.AdditionalFee):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.AdditionalFee)
+                @Html.ValidationMessageFor(model => model.AdditionalFee)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.AdditionalFeePercentage):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.AdditionalFeePercentage)
+                @Html.ValidationMessageFor(model => model.AdditionalFeePercentage)
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" width="100%">
+                <button type="submit" name="save" value="save" class="t-button">
+                    @T("Admin.Common.Save")</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <strong>Sandbox Credentials</strong>
+                <p>
+                    For sandbox credentials see <a href="http://www.payfast.co.za/c/std/integration-guide">http://www.payfast.co.za/c/std/integration-guide</a>
+                </p>
+            </td>
+        </tr>
+    </table>
+}

@@ -1,0 +1,8 @@
+﻿Group: Payment methods
+FriendlyName: Credit Card
+SystemName: Payments.PayFast
+Version: 3.00
+SupportedVersions: 3.00
+Author: Halcyonetic Studios
+DisplayOrder: 1
+FileName: NopExtension.Plugins.PayFast.dll
